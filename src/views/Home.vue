@@ -11,9 +11,7 @@
       <div class="post-info">
         <time class="post-time"> </time>
         <span> · {{ item.created_at }} · </span>
-        <span>
-          1 min read
-        </span>
+        <span> {{ item.page_view }} min read </span>
         <a href="https://zhangyake.github.io/hve/tag/gridea" class="post-tag">
           # Gridea
         </a>
@@ -22,7 +20,7 @@
       <a
         href="https://zhangyake.github.io/hve/post/hello-gridea"
         class="post-feature-image"
-        style="background-image: url('https://zhangyake.github.io/hve/post-images/hello-gridea.png')"
+        :style="{ backgroundImage: 'url(' + item.page_image_url + ')' }"
       >
       </a>
 

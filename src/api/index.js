@@ -28,5 +28,12 @@ export default {
       method: "get",
       params
     });
+  },
+  getArticleDeatil(params) {
+    return http({
+      url: `/api/_articles/${params.id}`,
+      method: "get",
+      params
+    });
   }
 };
