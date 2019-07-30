@@ -12,7 +12,7 @@
         <span> · {{ article.created_at }} · </span>
         <span> {{ article.page_view }} min read </span>
         <a
-          href="https://zhangyake.github.io/tag/gridea"
+          href="#"
           class="post-tags"
           v-for="(tag, index) in article.tags"
           :key="'tag' + index"
@@ -60,12 +60,6 @@ export default {
       });
     },
     parse(content) {
-      // let renderer = new marked.Renderer();
-      // renderer.code = function(code, language) {
-      //   return (
-      //     '<pre> <code class="hljs ' + language + '">' + code + "</code> </pre>"
-      //   );
-      // };
       marked.setOptions({
         // renderer,
         highlight: function(code) {

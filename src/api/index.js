@@ -22,6 +22,13 @@ export default {
       params
     });
   },
+  getArchives(params) {
+    return http({
+      url: "/api/_archives",
+      method: "get",
+      params
+    });
+  },
   getArticleList(params) {
     return http({
       url: "/api/_articles",

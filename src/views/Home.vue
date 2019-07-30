@@ -5,7 +5,10 @@
       v-for="(item, index) in articles"
       :key="'article' + index"
     >
-      <a href="https://zhangyake.github.io/hve/post/hello-gridea">
+      <a
+        href="#"
+        @click="$router.push({ name: 'post', params: { id: item.id } })"
+      >
         <h2 class="post-title" v-text="item.title"></h2>
       </a>
       <div class="post-info">
@@ -18,7 +21,8 @@
       </div>
 
       <a
-        href="https://zhangyake.github.io/hve/post/hello-gridea"
+        href="#"
+        @click="$router.push({ name: 'post', params: { id: item.id } })"
         class="post-feature-image"
         :style="{ backgroundImage: 'url(' + item.page_image_url + ')' }"
       >
